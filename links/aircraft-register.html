@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/register.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <script src="../scripts/index.js"></script>
+    <title>Register Aircrafts - San Andreas Aviation Administration</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body onload="onLoad()">
+    <header>
+        <a href="../index.html"><img src="../images/saaa.png" height="100" width="100" alt="logo" /></a>
+        <h1>SAN ANDREAS AVIATION ADMINISTRATION</h1>
+        <h2>Register Aircrafts</h2>
+        <h3>
+            <div class="links">
+                <a href="../index.html">Home</a>
+                <a href="person-records.html">Person Records</a>
+                <a href="aircraft-records.html">Aircraft Records</a>
+                <a class="active" href="aircraft-register.html">Register Aircraft</a>
+                <a href="person-register.html">Register Person</a>
+            </div>
+        </h3>
+        <br>
+    </header>
+
+    <br>
+    <div class="section-element">
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" required>
+        <label for="model">Model:</label>
+        <input type="text" id="model" required>
+        <label for="tailNumber">Tail Number:</label>
+        <input type="text" id="tailNumber" required>
+        <label for="owner">Owner:</label>
+        <select id="owner">
+        </select>
+        <label for="type">Classification:</label>
+        <select id="type" name="type" required>
+            <option value="PRIVATE" selected>Private</option>
+            <option value="GOVERNMENT">Government</option>
+        </select>
+    </div>
+
+    <button style="width:100px;align-self: center; margin: 10px;" onclick="registerAircraft()">Register</button>
+
+    <footer><span id="currentLSHour"></span> - SAN ANDREAS AVIATION ADMINISTRATION &copy; All rights reserved</footer>
+    <script type="text/javascript" src="../scripts/request.js"></script>
+    <script type="text/javascript" src="../scripts/aircraftRegister.js"></script>
+</body>
+
+</html>

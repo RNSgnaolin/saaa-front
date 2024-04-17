@@ -1,0 +1,18 @@
+.section-element {
+    display: grid;
+    grid-template-columns: 130px auto;
+    place-content: center;
+    row-gap: 3px;
+    text-align: justify;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.section-element * {
+    margin: 2px;
+}
