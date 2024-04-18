@@ -1,3 +1,11 @@
+.records {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
 .record-element, .record-element-red {
     display: inherit;
     grid-template-columns: auto auto;
@@ -16,14 +24,6 @@
 
 .record-element-red {
     background-color: rgb(244, 154, 154);
-}
-
-.records {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    place-content: center;
-    column-gap: 10px;
-    row-gap: 10px;
 }
 
 .box {
