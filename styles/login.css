@@ -12,7 +12,7 @@
 }
 
 .box .box-title {
-    background-color: navy;
+    background-color: rgb(2, 2, 60);
     grid-column-start: 1;
     grid-column-end: 3;
     color: rgb(235, 235, 134);
