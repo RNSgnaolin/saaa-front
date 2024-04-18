@@ -31,7 +31,7 @@ function registerAircraft() {
         "owner" : Number(document.getElementById("owner").value)
     };
 
-    if (!validTail(aircraft.tailNumber)) {
+    if (!validTail(aircraft.tailNumber) || !validTail(aircraft.callsign)) {
         window.alert("Invalid tail number.")
     }
 
