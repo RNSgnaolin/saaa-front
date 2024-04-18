@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <script src="../scripts/index.js" type="text/javascript"></script>
+    <title>San Andreas Aviation Administration</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body onload="onLoad()">
+    <header>
+        <img src="../images/saaa.png" height="100" width="100" alt="logo"><br>
+        <h1>SAN ANDREAS AVIATION ADMINISTRATION</h1>
+        <h3>103 New Empire Way<br>
+            Los Santos, S.A. 20591</h3>
+    </header>
+
+    <div class="box">
+        <span class="box-title">San Andreas Aviation Administration</span>
+            <label for="login" style="margin-top:10px;">Username:</label>
+            <input type="text" id="login" style="width:200px;margin-top:10px;" required />
+            <label for="password">Password:</label>
+            <input type="text" id="password" style="width:200px" required />
+            <button onclick="requestLogin()" class="button">Login</button>
+    </div>
+
+    <footer><span id="currentLSHour"></span> - SAN ANDREAS AVIATION ADMINISTRATION &copy; All rights reserved
+    </footer>
+    <script type="text/javascript" src="../scripts/request.js"></script>
+    <script type="text/javascript" src="../scripts/login.js"></script>
+</body>
+
+</html>    

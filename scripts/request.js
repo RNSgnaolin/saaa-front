@@ -2,7 +2,12 @@ const url = "http://localhost:8080"; // Change this to the backend API url when 
 
 function get(endpoint) {
 
-    return fetch(`${url}${endpoint}`)
+    return fetch(`${url}${endpoint}`, {
+        method: "GET",
+        headers: {
+            "Authorization": localStorage.getItem("token")
+        }
+    })
         .then(response => response.json())
         .catch(error => {
             console.error('Error accessing endpoint ', error);
@@ -16,7 +21,8 @@ function post(endpoint, body) {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json",
+            "Authorization": localStorage.getItem("token")
         }
     });
 
