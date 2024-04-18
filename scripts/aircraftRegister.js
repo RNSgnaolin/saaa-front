@@ -26,6 +26,7 @@ function registerAircraft() {
         "brand" : document.getElementById("brand").value,
         "model" : document.getElementById("model").value,
         "tailNumber" : document.getElementById("tailNumber").value,
+        "callsign" : document.getElementById("callsign").value,
         "type" : document.getElementById("type").value,
         "owner" : Number(document.getElementById("owner").value)
     };
