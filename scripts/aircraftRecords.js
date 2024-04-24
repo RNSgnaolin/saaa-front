@@ -4,7 +4,7 @@ function printResults(matchingRecords) {
     matchingRecords.then(aircrafts => {
 
         if (aircrafts.content.length === 0) {
-            document.getElementById("results").innerHTML = "<div class=\"box\"><div class=\"title\">NO MATCHES FOUND</div></div>"
+            document.getElementById("results").innerHTML = "<div class=\"box\"><span style=\"font-weight:bold\">NO MATCHES FOUND</span></div>"
         }
 
         aircrafts.content.forEach((aircraft => {
