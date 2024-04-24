@@ -26,6 +26,9 @@ function printResults(matchingRecords) {
         element.appendChild(createTextElement("Tail number:"));
         element.appendChild(createValueElement(aircraft.tailNumber))
 
+        element.appendChild(createTextElement("Callsign:"));
+        element.appendChild(createValueElement(aircraft.callsign))
+
         element.appendChild(createTextElement("Agency Type:"));
         element.appendChild(createValueElement(aircraft.type));
 
