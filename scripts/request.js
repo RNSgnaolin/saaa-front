@@ -1,18 +1,29 @@
-const url = "http://localhost:8080"; // Change this to the backend API url when deploying
+// GET and POST requests for the API. Session Token is fetched and stored in login.js
+
+const url = "http://localhost:8080"; 
+
+function getSessionToken() {
+    return document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("sessionToken="))
+    .split("=")[1];
+}
 
 function get(endpoint) {
 
     return fetch(`${url}${endpoint}`, {
         method: "GET",
         headers: {
-            "Authorization": localStorage.getItem("token")
+            "Authorization": getSessionToken()
         }
-    })
-        .then(response => response.json())
-        .catch(error => {
+    }).then(response => {
+            if (response.status() == 403)
+                window.location.href = "../links/login.html"
+            else 
+                response.json()
+    }).catch(error => {
             console.error('Error accessing endpoint ', error);
         });
-
 }
 
 function post(endpoint, body) {
@@ -22,10 +33,13 @@ function post(endpoint, body) {
         body: JSON.stringify(body),
         headers: {
             "Content-type": "application/json",
-            "Authorization": localStorage.getItem("token")
+            "Authorization": getSessionToken()
         }
-    });
-
+    }).then(response => {
+            if (response.status() == 403) {
+                window.location.href = "../links/login.html"
+            }
+        });
 }
 
 
